@@ -1,7 +1,11 @@
+/** Author Nathan Kooy */
+//received help from http://www.java-forums.org/new-java/25914-4x4-2d-array-card-game-need-solving.html
+
+
 import java.util.*;
 
 	
-public class HW3ptwo
+public class HW3ptwo //prompting user and calling the game methods
 	{
 	public static void main(String[] args){
 	String pl="";
@@ -24,7 +28,7 @@ public class HW3ptwo
 	int cards[][]=new int[4][4];
 	boolean cs[][]=new boolean[4][4];
 	
-	cards=shuffle();
+	cards=shuffle();//calling shuffle method to place cards
 	System.out.println("  |  1 2 3 4 ");
 	System.out.println("-------------");
 	for(int i=0;i<4;++i)
@@ -55,7 +59,7 @@ public class HW3ptwo
 	{
 	do
 	{
-	System.out.print("Please enter the first card coordinates");
+	System.out.print("Please enter the first card coordinates"); //collecting first
 	String rw=new String(keyboard.next());
 	rw0=rw.charAt(0);cl0=rw.charAt(1);
 	r1=Character.digit(rw0,5);c1=Character.digit(cl0,5);
@@ -66,12 +70,12 @@ public class HW3ptwo
 	}while(cs[r1-1][c1-1]!= false);
 	do
 	{
-	System.out.print("Please enter the second card coordinates:");
+	System.out.print("Please enter the second card coordinates:"); //collecting second card
 	String rw11=new String(keyboard.next());
 	rw1=rw11.charAt(0);cl1=rw11.charAt(1);
 	r2=Character.digit(rw1,5);c2=Character.digit(cl1,5);
 
-	}while((cs[r2-1][c2-1]!= false)||((r1==r2)&&(c1==c2)));
+	}while((cs[r2-1][c2-1]!= false)||((r1==r2)&&(c1==c2))); // reprinting board with the flipped cards
 	r1--;
 	c1--;
 	r2--;
@@ -144,7 +148,7 @@ public class HW3ptwo
 	}
 	System.out.println();
 	ov = true;
-	for (int r=0; r<4; r++) // check all card status, they all should be true/flipped to end the game.
+	for (int r=0; r<4; r++) // game will not end unless all cards are flipped
 	{
 	for (int c=0; c<4; c++)
 	{
