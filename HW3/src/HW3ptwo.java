@@ -54,7 +54,7 @@ public class HW3ptwo //prompting user and calling the game methods
 	char rw0,rw1,cl0,cl1;
 	int r1,c1;
 	int r2=0,c2=0,tmr=5000;
-	//Timer timer=new Timer(tmr);
+	
 	do
 	{
 	do
@@ -67,6 +67,7 @@ public class HW3ptwo //prompting user and calling the game methods
 	{
 	System.out.println("This card is already flipped! Select another card.");
 	}
+	
 	}while(cs[r1-1][c1-1]!= false);
 	do
 	{
@@ -86,19 +87,26 @@ public class HW3ptwo //prompting user and calling the game methods
 	for (int r=0; r<4; r++)
 	{
 	System.out.print(" " +(r+1) +" | ");
+	
 	for (int c=0; c<4; c++)
 	{
-	if ((r==r1)&&(c==c1))
+	
+		if ((r==r1)&&(c==c1))
 	{
-	System.out.print(cards[r][c] +" ");
+	
+			System.out.print(cards[r][c] +" ");
 	}
-	else if((r==r2)&&(c==c2))
+	
+		else if((r==r2)&&(c==c2))
 	{
-	System.out.print(cards[r][c] +" ");
+	
+			System.out.print(cards[r][c] +" ");
 	}
-	else if (cs[r][c] == true)
+	
+		else if (cs[r][c] == true)
 	{
-	System.out.print(cards[r][c] +" ");
+	
+			System.out.print(cards[r][c] +" ");
 	}
 	else
 	{
@@ -130,7 +138,7 @@ public class HW3ptwo //prompting user and calling the game methods
 	System.out.println(" | 1 2 3 4 ");
 	System.out.println("---+---------");
 	
-	for (int r=0; r<4; r++) // reprint the board,for user to make new guess
+	for (int r=0; r<4; r++) // reprint the board so a new guess can be made
 	{
 	System.out.print(" " +(r+1) +" | ");
 	for (int c=0; c<4; c++)
